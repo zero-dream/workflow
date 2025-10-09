@@ -20,9 +20,14 @@ source "$scriptDir/../library/script/setEnv.sh"
 setEnv 'ZD_Owner' 'zero-dream'
 setEnv 'ZD_DATE' "$(TZ=UTC-8 date +"%y%m%d%H%M%S")"
 setEnv 'ZD_MainPath' "$GITHUB_WORKSPACE/zerodream"
-setEnv 'ZD_AppPath' "$GITHUB_WORKSPACE/application"
 setEnv 'ZD_HookPath' "$GITHUB_WORKSPACE/hook"
 setEnv 'ZD_TempPath' "$GITHUB_WORKSPACE/.zerodream-temp" && mkdir -p "$ZD_TempPath"
+
+# CIEnv
+setEnv 'CI_AppPath' "$GITHUB_WORKSPACE/application"
+setEnv 'CI_ConfigPath' "$GITHUB_WORKSPACE/config"
+setEnv 'CI_ScriptPath' "$GITHUB_WORKSPACE/script"
+setEnv 'CI_StoragePath' "$GITHUB_WORKSPACE/storage"
 
 # --------------------------------------------------
 

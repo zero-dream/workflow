@@ -10,6 +10,6 @@ find "$GITHUB_WORKSPACE/" -type f \
 find "$ZD_MainPath/" -type f \
   ! -name '.gitkeep' \
   -exec chmod +x {} \;
-find "$ZD_AppPath/" -type f \
+find "$CI_AppPath/" -type f \
   ! -name '.gitkeep' \
   -exec chmod +x {} \;

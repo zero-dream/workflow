@@ -13,3 +13,5 @@ application ------ Application Directory
 config ------- Configuration Directory
 
 script ------ Script Directory
+
+storage ------ Storage Directory
