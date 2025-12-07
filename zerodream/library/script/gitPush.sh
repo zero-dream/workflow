@@ -21,7 +21,7 @@ function gitPush() {
     echo "No changes to commit"
     return 0
   else
-    local commitMessage="ZeroDreamCI $message"
+    local commitMessage="ZeroDream $message"
     git commit -m "$commitMessage"
     git push origin HEAD:$githubRef
     return $?

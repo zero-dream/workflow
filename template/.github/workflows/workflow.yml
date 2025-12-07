@@ -1,5 +1,5 @@
 # CI 项目
-name: ZeroDreamCI
+name: workflow
 
 # CI 权限
 permissions: write-all
@@ -28,21 +28,21 @@ env:
 # CI 任务
 jobs:
   template:
-    name: ZeroDreamCI
+    name: workflow
     runs-on: ubuntu-latest
     steps:
       - name: CheckoutProject
         uses: actions/checkout@main
 
-      - name: InitZeroDreamCI
+      - name: InitWorkflow
         run: |
-          ZeroDreamCiPath="$RUNNER_TEMP/ZeroDreamCI-$(uuidgen | tr -d '-')"
-          git clone --depth=1 https://github.com/zero-dream/ZeroDream-CI.git "$ZeroDreamCiPath/"
-          chmod +x "$ZeroDreamCiPath/zerodream/main/init.sh"
-          source "$ZeroDreamCiPath/zerodream/main/init.sh"
+          WorkflowPath="$RUNNER_TEMP/Workflow-$(uuidgen | tr -d '-')"
+          git clone --depth=1 https://github.com/zero-dream/workflow.git "$WorkflowPath/"
+          chmod +x "$WorkflowPath/zerodream/main/init.sh"
+          source "$WorkflowPath/zerodream/main/init.sh"
           # --------------------------------------------------
           source "$ZD_ScriptLibPath/hook.sh"
-          hook 'ZeroDreamCI/InitZeroDreamCI'
+          hook 'Workflow/InitWorkflow'
 
       - name: WriteCode
         run: |

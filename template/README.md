@@ -1,12 +1,12 @@
-### ZeroDream-CI
+### Workflow
 
-The core of all ZeroDream-CI
+The core of all Workflow
 
 ### Directory Description
 
-zerodream ------ ZeroDream-CI Private Directory
+zerodream ------ ZeroDream Private Directory
 
-hook ------ ZeroDream-CI SpecialUse Directory
+hook ------ Workflow SpecialUse Directory
 
 application ------ Application Directory
 

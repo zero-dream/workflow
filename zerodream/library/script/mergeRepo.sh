@@ -3,8 +3,10 @@
 
 # --------------------------------------------------
 
+# MergeSort: zero-dream/workflow > $GITHUB_REPOSITORY > RepoA > RepoB
+
 # Usage:
-# mergeArr=('zero-dream/RepoA' 'zero-dream/RepoB') # $ZeroDreamCI > $GITHUB_REPOSITORY > RepoA > RepoB
+# mergeArr=('zero-dream/RepoA' 'zero-dream/RepoB')
 # mergeRepo 'mergeArr'
 
 # MergeRepo
